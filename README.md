@@ -14,20 +14,20 @@ Or load `spam.ipynb` in ipython/jupyter notebook. This includes a small view of 
 
 ## Method
 This analysis has the following core steps:
-1 - read in and prepare dataset
-2 - possibly apply dimensionality reduction (transform data)
-3 - split data into training and testing sets
-4 - train model on training set
-5 - test model by comparing expected and predicted results from the testing set
-6 - compute accuracy and error
-7 - pick winner
+1. read in and prepare dataset
+2. possibly apply dimensionality reduction (transform data)
+3. split data into training and testing sets
+4. train model on training set
+5. test model by comparing expected and predicted results from the testing set
+6. compute accuracy and error
+7. pick winner
 
 In this case we do not only want to use one algorithm, instead we use a Naive Bayes classifier and a Support Vector Machine (SVM). We aslo compare two decomposition methods: Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA). We compare the results when using all features of the data, as well as when only using the best and top ten decomposed features. This will tell us if all the features present in the dataset are actually predictive of the output. In total we compare 10 combinations.
 
 For each combination run 15 iterations of training and testing, using a different subsets of the dataset (cross-validation). This ensures we don't accidentally pick a very homogeneous subset that doen't support the features on the whole dataset.
 
 ## Results
-The best result for the combinations given is an *accuracy of 0.915* with an error of 0.007. This is achieved using an *LDA* to reduce the dimensionality with 1 component and an *SVM* to train the classification model. Using 10 components is only marginally less accurate, this also depends on the seed, so results may vary slightly. Generally, the Naive Bayes algorithm performs worse than the SVM but is trained much faster.
+The best result for the combinations given is an **accuracy of 0.915** with an error of 0.007. This is achieved using an **LDA** to reduce the dimensionality with 1 component and an **SVM** to train the classification model. Using 10 components is only marginally less accurate, this also depends on the seed, so results may vary slightly. Generally, the Naive Bayes algorithm performs worse than the SVM but is trained much faster.
 
 ## Next steps
 With the current setup, it is easy to add further classification algorithms and decompositions. Similary more combinations of components could be added by setting up an automatic grid search over the parameters.
