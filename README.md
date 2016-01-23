@@ -31,7 +31,7 @@ For each combination run 15 iterations of training and testing, using a differen
 The best result for the combinations given is an **accuracy of 0.913** with an error of 0.006. This is achieved using an **LDA** to reduce the dimensionality with 10 components and an **SVM** to train the classification model. Using 1 component is only marginally less accurate, this also depends on the seed, so results may vary slightly between runs. Generally, the Naive Bayes algorithm performs worse than the SVM but is trained much faster.
 
 ## Next steps
-With the current setup, it is easy to add further classification algorithms and decompositions. Similary more combinations of components could be added by setting up an automatic grid search over the parameters.
+With the current setup, it is easy to add further classification algorithms and decompositions. Examples are k-Nearest Neighbour, Decision Trees, Random Forests. Similary more combinations of components could be added by setting up an automatic grid search over the parameters.
 
 ## Appendix
 
