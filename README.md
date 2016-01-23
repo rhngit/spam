@@ -23,7 +23,7 @@ This analysis has the following core steps:
 6. compute accuracy and error
 7. pick winner
 
-In this case we do not only want to use one algorithm, instead we use a Naive Bayes classifier and a Support Vector Machine (SVM). We also compare two decomposition methods: Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA). We compare the results when using all features of the data, as well as when only using the best and top ten decomposed features. This will tell us if all the features present in the dataset are actually predictive of the output. In total we compare 10 combinations.
+In this case we do not only want to use one algorithm, instead we use a Naive Bayes classifier and a Support Vector Machine (SVM). These are selected as they tend to perform well (but differently) on this type of (non-categorical) dataset. We also compare two decomposition methods: Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA). We compare the results when using all features of the data, as well as when only using the best and top ten decomposed features. This will tell us if all the features present in the dataset are actually predictive of the output. In total we compare 10 combinations.
 
 For each combination run 15 iterations of training and testing, using a different subsets of the dataset (cross-validation). This ensures we don't accidentally pick a very homogeneous subset that doesn't support the features of the whole dataset. We use 80% of the data for training and 20% for subsequent testing.
 
