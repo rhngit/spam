@@ -25,7 +25,7 @@ This analysis has the following core steps:
 
 In this case we do not only want to use one algorithm, instead we use a Naive Bayes classifier and a Support Vector Machine (SVM). We also compare two decomposition methods: Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA). We compare the results when using all features of the data, as well as when only using the best and top ten decomposed features. This will tell us if all the features present in the dataset are actually predictive of the output. In total we compare 10 combinations.
 
-For each combination run 15 iterations of training and testing, using a different subsets of the dataset (cross-validation). This ensures we don't accidentally pick a very homogeneous subset that doesn't support the features of the whole dataset.
+For each combination run 15 iterations of training and testing, using a different subsets of the dataset (cross-validation). This ensures we don't accidentally pick a very homogeneous subset that doesn't support the features of the whole dataset. We use 80% of the data for training and 20% for subsequent testing.
 
 ## Results
 The best result for the combinations given is an **accuracy of 0.913** with an error of 0.006. This is achieved using an **LDA** to reduce the dimensionality with 10 components and an **SVM** to train the classification model. Using 1 component is only marginally less accurate, this also depends on the seed, so results may vary slightly between runs. Generally, the Naive Bayes algorithm performs worse than the SVM but is trained much faster.
