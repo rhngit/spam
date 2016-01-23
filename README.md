@@ -14,6 +14,7 @@ Or load `spam.ipynb` in ipython/jupyter notebook. This includes a small view of 
 
 ## Method
 This analysis has the following core steps:
+
 1. read in and prepare dataset
 2. possibly apply dimensionality reduction (transform data)
 3. split data into training and testing sets
