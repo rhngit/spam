@@ -1,5 +1,5 @@
-# Don't sync data, available here: https://archive.ics.uci.edu/ml/datasets/Spambase
-data
+# Don't sync raw data, available here: https://archive.ics.uci.edu/ml/datasets/Spambase
+data/raw
 
 # Ignore these hidden and temp files
 .ipynb_checkpoints
