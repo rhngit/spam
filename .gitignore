@@ -1,0 +1,8 @@
+# Don't sync data, available here: https://archive.ics.uci.edu/ml/datasets/Spambase
+data
+
+# Ignore these hidden and temp files
+.ipynb_checkpoints
+.git
+.DS_Store
+__pycache__
