@@ -4,12 +4,20 @@ from sklearn.cross_validation import train_test_split
 from numpy import mean, var, sum, diag, shape
 
 def load_data():
+	'''
+		Returns data and target from dataset
+	'''
 	data = genfromtxt('data/spambase/spambase.data', delimiter=',')
 	target = data[:,-1]
 	data = data[:,:-1]
 	return data, target
 
 def evaluate(algo, dim_rec, components, iterations=15):
+	'''
+		Returns average accuracy, error and confusion matrix for 
+		combination of classification algorithm (algo), dimensionality reduction
+		method (dim_rec) for n components, run iterations times.
+	'''
 	X, y = load_data()
 	if components > 0:
 		X, y = dim_rec(X, y, components)
